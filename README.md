@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# MCP.ai
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A platform for AI model context providers to share, review, and govern their contributions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Server & Application List with User Reviews
+- Adoption and Growth Dashboard
+- User Contributions with AI Assistance
+- Blockchain-based Incentive System
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/mcp-dao.git
+   cd mcp-dao
+   ```
 
-### `npm run build`
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Set up environment variables
+   ```bash
+   cp .env.example .env
+   ```
+   Then edit the `.env` file and add your Privy App ID.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Authentication with Privy
 
-### `npm run eject`
+This application uses Privy for authentication. To set up Privy:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Create an account at [Privy Console](https://console.privy.io/)
+2. Create a new project
+3. Copy the App ID from your project settings
+4. Add the App ID to your `.env` file:
+   ```
+   REACT_APP_PRIVY_APP_ID=your_privy_app_id_here
+   ```
+5. Restart the application
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you don't have a Privy App ID, the application will run in demo mode with mock authentication.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Development
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Project Structure
 
-## Learn More
+- `/src/components`: React components
+  - `/layout`: Layout components (Header, Footer)
+  - `/home`: Home page components
+  - `/servers`: Server list and detail components
+  - `/dashboard`: Dashboard components
+  - `/profile`: User profile components
+  - `/dao`: DAO and governance components
+  - `/submit`: Submission and review components
+  - `/auth`: Authentication components
+- `/src/providers`: Context providers
+- `/src/theme`: Theme configuration
+- `/src/utils`: Utility functions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License - see the LICENSE file for details.
