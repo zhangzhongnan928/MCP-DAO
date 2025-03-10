@@ -1,6 +1,6 @@
 # MCP.ai
 
-A platform for AI model context providers to share, review, and govern their contributions.
+A platform for MCP devs to share, review, and govern their contributions.
 
 ## Features
 
